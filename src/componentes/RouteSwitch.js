@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HashRouter, Routes, Route } from "react-router-dom";
 import HomePage from "./homePage";
 import Shop from "./shop";
 import Gracias from "./gracias_shopping";
@@ -10,13 +10,13 @@ const RouteSwitch = () => {
   
   return (
     <DataProvider  >
-      <BrowserRouter>
+      <HashRouter>
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/Shop" element={<Shop />} />
           <Route path="/gracias" element={<Gracias />} />
         </Routes>
-      </BrowserRouter>
+      </HashRouter>
     </DataProvider>
   );
 };
